@@ -1,17 +1,19 @@
 postgis:
-  image: kartoza/postgis
+  image: mdillon/postgis:9.6-alpine
+  environment:
+  - POSTGRES_PASSWORD=postgres
   hostname: postgis
   ports:
   - "5432:5432"
   volumes:
   - ./postgis:/tmp/postgis
 geoserver:
-  build: geoserver 
+  image: appliedis/geoserver:2.11.0
   hostname: geoserver
   ports:
   - "8080:8080"
   links:
   - postgis:postgis
   volumes:
-  - ./geoserver_data:/opt/geoserver/data_dir
+  - ./geoserver_data:/etc/geoserver
   - ./geoserver:/tmp/geoserver
