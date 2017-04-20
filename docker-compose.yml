@@ -9,6 +9,8 @@ postgis:
   - ./postgis:/tmp/postgis
 geoserver:
   image: appliedis/geoserver:2.11.0
+  environment:
+  - ENABLE_CORS=true
   hostname: geoserver
   ports:
   - "8080:8080"
