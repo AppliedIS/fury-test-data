@@ -13,7 +13,7 @@ geoserver:
   - ENABLE_CORS=true
   hostname: geoserver
   ports:
-  - "8080:8080"
+  - "80:8080"
   links:
   - postgis:postgis
   volumes:

@@ -1,14 +1,14 @@
 <featureType>
-  <name>modis</name>
-  <nativeName>modis</nativeName>
+  <name>viirs</name>
+  <nativeName>viirs</nativeName>
   <namespace>
     <name>test</name>
     <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="alternate" href="http://localhost:8080/geoserver/rest/namespaces/test.xml" type="application/xml"/>
   </namespace>
-  <title>modis</title>
+  <title>viirs</title>
   <keywords>
     <string>features</string>
-    <string>modis</string>
+    <string>viirs</string>
   </keywords>
   <nativeCRS>GEOGCS[&quot;WGS 84&quot;, 
   DATUM[&quot;World Geodetic System 1984&quot;, 
@@ -21,17 +21,17 @@
   AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]]</nativeCRS>
   <srs>EPSG:4326</srs>
   <nativeBoundingBox>
-    <minx>-177.147155761719</minx>
-    <maxx>175.575164794922</maxx>
-    <miny>-45.2154922485352</miny>
-    <maxy>66.9934921264648</maxy>
+    <minx>-171.652984619141</minx>
+    <maxx>179.772201538086</maxx>
+    <miny>-53.3547210693359</miny>
+    <maxy>71.9274215698242</maxy>
     <crs>EPSG:4326</crs>
   </nativeBoundingBox>
   <latLonBoundingBox>
-    <minx>-177.147155761719</minx>
-    <maxx>175.575164794922</maxx>
-    <miny>-45.2154922485352</miny>
-    <maxy>66.9934921264648</maxy>
+    <minx>-171.652984619141</minx>
+    <maxx>179.772201538086</maxx>
+    <miny>-53.3547210693359</miny>
+    <maxy>71.9274215698242</maxy>
     <crs>EPSG:4326</crs>
   </latLonBoundingBox>
   <projectionPolicy>FORCE_DECLARED</projectionPolicy>
@@ -77,7 +77,7 @@
       <binding>java.math.BigDecimal</binding>
     </attribute>
     <attribute>
-      <name>brightness</name>
+      <name>bright_ti4</name>
       <minOccurs>0</minOccurs>
       <maxOccurs>1</maxOccurs>
       <nillable>true</nillable>
@@ -123,7 +123,7 @@
       <minOccurs>0</minOccurs>
       <maxOccurs>1</maxOccurs>
       <nillable>true</nillable>
-      <binding>java.lang.Integer</binding>
+      <binding>java.lang.String</binding>
     </attribute>
     <attribute>
       <name>version</name>
@@ -133,7 +133,7 @@
       <binding>java.lang.String</binding>
     </attribute>
     <attribute>
-      <name>bright_t31</name>
+      <name>bright_ti5</name>
       <minOccurs>0</minOccurs>
       <maxOccurs>1</maxOccurs>
       <nillable>true</nillable>
@@ -154,18 +154,18 @@
       <binding>java.lang.String</binding>
     </attribute>
     <attribute>
-      <name>geom</name>
-      <minOccurs>0</minOccurs>
-      <maxOccurs>1</maxOccurs>
-      <nillable>true</nillable>
-      <binding>com.vividsolutions.jts.geom.Point</binding>
-    </attribute>
-    <attribute>
       <name>acq_datetime</name>
       <minOccurs>0</minOccurs>
       <maxOccurs>1</maxOccurs>
       <nillable>true</nillable>
       <binding>java.sql.Date</binding>
+    </attribute>
+    <attribute>
+      <name>geom</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>1</maxOccurs>
+      <nillable>true</nillable>
+      <binding>com.vividsolutions.jts.geom.Point</binding>
     </attribute>
   </attributes>
 </featureType>

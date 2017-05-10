@@ -1,5 +1,5 @@
-# docker-compose-modis
-Scripts to construct docker containers and populate with a stream of data based on MODIS.
+# docker-compose-features
+Scripts to construct docker containers and populate with last seven days of MODIS and VIIRS data.
 
 ## Daemonize
 Create daemonized instance of the PostGIS and GeoServer containers:
@@ -7,13 +7,13 @@ Create daemonized instance of the PostGIS and GeoServer containers:
 ```docker-compose up -d```
 
 ## Initialize
-Populate the PostGIS with MODIS data and GeoServer with layer exposing table on Mac / Linux:
+Populate the PostGIS with data and GeoServer with layer exposing table on Mac / Linux:
 
-```bash initial-modis.sh```
+```bash initial-data.sh```
 
 On Windows from the cmd.exe prompt:
 
-```initial-modis.bat```
+```initial-data.bat```
 
 
 ## Prosper
