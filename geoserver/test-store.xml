@@ -1,11 +1,20 @@
 <dataStore>
   <name>test</name>
   <connectionParameters>
-    <host>postgis</host>
-    <port>5432</port>
-    <database>testdb</database>
-    <user>postgres</user>
-    <passwd>postgres</passwd>
-    <dbtype>postgis</dbtype>
+    <entry key="Estimated extends">false</entry>
+    <entry key="encode functions">false</entry>
+    <entry key="Expose primary keys">true</entry>
+    <entry key="validate connections">false</entry>
+    <entry key="Support on the fly geometry simplification">false</entry>
+    <entry key="create database">false</entry>
+    <entry key="preparedStatements">false</entry>
+    <entry key="database">testdb</entry>
+    <entry key="port">5432</entry>
+    <entry key="passwd">postgres</entry>
+    <entry key="host">postgis</entry>
+    <entry key="dbtype">postgis</entry>
+    <entry key="Loose bbox">false</entry>
+    <entry key="Test while idle">false</entry>
+    <entry key="user">postgres</entry>
   </connectionParameters>
 </dataStore>
