@@ -1,7 +1,7 @@
 #!/bin/bash
 
-docker exec dockercomposefeatures_postgis_1 apk add -U curl unzip ca-certificates openssl
-docker exec -u postgres dockercomposefeatures_postgis_1 sh /tmp/postgis/initial-data.sh 
+docker exec fury-postgis apk add -U curl unzip ca-certificates openssl
+docker exec -u postgres fury-postgis sh /tmp/postgis/initial-data.sh
 
-docker exec dockercomposefeatures_geoserver_1 apk add -U curl
-docker exec dockercomposefeatures_geoserver_1 sh /tmp/geoserver/initial-data.sh 
+docker exec fury-geoserver apk add -U curl
+docker exec fury-geoserver sh /tmp/geoserver/initial-data.sh 

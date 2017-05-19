@@ -1,21 +1,25 @@
-postgis:
-  image: mdillon/postgis:9.6-alpine
-  environment:
-  - POSTGRES_PASSWORD=postgres
-  hostname: postgis
-  ports:
-  - "5432:5432"
-  volumes:
-  - ./postgis:/tmp/postgis
-geoserver:
-  image: appliedis/geoserver:2.11.0
-  environment:
-  - ENABLE_CORS=true
-  hostname: geoserver
-  ports:
-  - "80:8080"
-  links:
-  - postgis:postgis
-  volumes:
-  - ./geoserver_data:/etc/geoserver
-  - ./geoserver:/tmp/geoserver
+version: '2'
+services:
+  geoserver:
+    image: appliedis/geoserver:2.11.0
+    container_name: fury-geoserver
+    environment:
+    - ENABLE_CORS=true
+    hostname: geoserver
+    depends_on:
+    - postgis
+    ports:
+    - "80:8080"
+    volumes:
+    - ./geoserver_data:/etc/geoserver
+    - ./geoserver:/tmp/geoserver
+  postgis:
+    image: mdillon/postgis:9.6-alpine
+    container_name: fury-postgis
+    environment:
+    - POSTGRES_PASSWORD=postgres
+    hostname: postgis
+    ports:
+    - "5432:5432"
+    volumes:
+    - ./postgis:/tmp/postgis

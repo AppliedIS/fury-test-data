@@ -1,4 +1,4 @@
-# docker-compose-features
+# FURY Test Data
 Scripts to construct docker containers and populate with last seven days of MODIS and VIIRS data.
 
 ## Daemonize
@@ -17,5 +17,4 @@ On Windows from the cmd.exe prompt:
 
 
 ## Prosper
-Go find your GeoServer at http://localhost:8080/geoserver/
-
+Go find your GeoServer at http://localhost/geoserver/
